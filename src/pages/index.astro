@@ -731,10 +731,28 @@ const sudoku = baseArray.map((e, i) => {
       };
     });
     console.log("回答");
-    sudoku = addMemo(sudoku);
 
-    console.log("結果", sudoku);
+    try {
+      sudoku = addMemo(sudoku);
+      console.log("結果", sudoku);
 
-    createResult(sudoku);
+      // 空入力かをチェック
+      const empty = !!sudoku.filter((e) => e.value).length;
+      if (!empty) {
+        alert("空ですよー");
+        return;
+      }
+
+      // 埋められているかをチェック
+      const notFilled = !!sudoku.filter((e) => !e.value).length;
+      if (notFilled) {
+        alert("入力値がおかしいかも、、？");
+        return;
+      }
+
+      createResult(sudoku);
+    } catch (e) {
+      alert("入力値がおかしいかも、、？");
+    }
   });
 </script>
