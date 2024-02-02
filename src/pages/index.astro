@@ -510,7 +510,7 @@ const sudoku = baseArray.map((e, i) => {
   <div class="s-sudoku">
     <div class="s-sudoku__inner">
       <h1 class="c-simpleTitle">SUDOKU</h1>
-      <form id="sudoku-input" action="">
+      <form class="s-sudoku__form" id="sudoku-input" action="">
         <div class="c-sudoku">
           <div class="c-sudoku__line"></div>
           <div class="c-sudoku__line"></div>
@@ -532,7 +532,9 @@ const sudoku = baseArray.map((e, i) => {
             })
           }
         </div>
-        <button type="submit">出力</button>
+        <div class="s-sudoku__btnWrap">
+          <button class="c-submitBtn" type="submit">出力</button>
+        </div>
       </form>
       <div id="result"></div>
     </div>

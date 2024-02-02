@@ -1,6 +1,10 @@
+// base
+@import "./mixin.scss";
+
 // components
 @import "./components/c-simpleTitle.scss";
 @import "./components/c-sudoku.scss";
+@import "./components/c-submitBtn.scss";
 
 // sections
 @import "./sections/s-sudoku.scss";

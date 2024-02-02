@@ -1,0 +1,11 @@
+@mixin pc {
+  @media screen and (width >= 769px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (width <= 768px) {
+    @content;
+  }
+}
