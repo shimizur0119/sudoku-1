@@ -746,13 +746,15 @@ const sudoku = baseArray.map((e, i) => {
       // 埋められているかをチェック
       const notFilled = !!sudoku.filter((e) => !e.value).length;
       if (notFilled) {
-        alert("入力値がおかしいかも、、？");
+        alert("入力値がおかしいかも、、？（エラーコード:1）");
+        createResult(sudoku);
         return;
       }
 
       createResult(sudoku);
     } catch (e) {
-      alert("入力値がおかしいかも、、？");
+      alert("入力値がおかしいかも、、？（エラーコード:2）");
+      createResult(sudoku);
     }
   });
 </script>
